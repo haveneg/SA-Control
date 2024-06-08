@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SECRET AGENT BACKUP CONTROL PANEL</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .iframe-container {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+    .button-container {
+        text-align: center;
+    }
+    button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+    <h1>SECRET AGENT BACKUP CONTROL PANEL</h1>
+    <div class="container">
+        <div class="iframe-container">
+            <iframe src="hall-lights.html" width="100%" height="200"></iframe>
+            <div class="button-container">
+                <button id="hallLightsOn">ON</button>
+                <button id="hallLightsOff">OFF</button>
+            </div>
+        </div>
+        <div class="iframe-container">
+            <iframe src="shoebox.html" width="100%" height="200"></iframe>
+            <div class="button-container">
+                <button id="shoeboxOn">ON</button>
+                <button id="shoeboxOff">OFF</button>
+            </div>
+        </div>
+        <div class="iframe-container">
+            <iframe src="knock-knock.html" width="100%" height="200"></iframe>
+            <div class="button-container">
+                <button id="knockKnockOn">ON</button>
+                <button id="knockKnockOff">OFF</button>
+            </div>
+        </div>
+        <div class="iframe-container">
+            <iframe src="red-light.html" width="100%" height="200"></iframe>
+            <div class="button-container">
+                <button id="redLightOn">ON</button>
+                <button id="redLightOff">OFF</button>
+            </div>
+        </div>
+        <div class="iframe-container">
+            <iframe src="disco-lights.html" width="100%" height="200"></iframe>
+            <div class="button-container">
+                <button id="discoLightsOn">ON</button>
+                <button id="discoLightsOff">OFF</button>
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button id="resetAll">RESET ALL</button>
+    </div>
+
+    <script>
+        // Function to handle button clicks
+        function handleClick(action, iframeId) {
+            const iframe = document.getElementById(iframeId);
+            iframe.contentWindow.postMessage(action, '*');
+        }
+
+        // Function to handle reset all button click
+        function handleResetAll() {
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                iframe.contentWindow.postMessage('reset', '*');
+            });
+        }
+
+        // Add event listeners to buttons
+        document.getElementById('hallLightsOn').addEventListener('click', () => handleClick('on', 'hall-lights'));
+        document.getElementById('hallLightsOff').addEventListener('click', () => handleClick('off', 'hall-lights'));
+        document.getElementById('shoeboxOn').addEventListener('click', () => handleClick('on', 'shoebox'));
+        document.getElementById('shoeboxOff').addEventListener('click', () => handleClick('off', 'shoebox'));
+        document.getElementById('knockKnockOn').addEventListener('click', () => handleClick('on', 'knock-knock'));
+        document.getElementById('knockKnockOff').addEventListener('click', () => handleClick('off', 'knock-knock'));
+        document.getElementById('redLightOn').addEventListener('click', () => handleClick('on', 'red-light'));
+        document.getElementById('redLightOff').addEventListener('click', () => handleClick('off', 'red-light'));
+        document.getElementById('discoLightsOn').addEventListener('click', () => handleClick('on', 'disco-lights'));
+        document.getElementById('discoLightsOff').addEventListener('click', () => handleClick('off', 'disco-lights'));
+        document.getElementById('resetAll').addEventListener('click', handleResetAll);
+    </script>
+</body>
+</html>
