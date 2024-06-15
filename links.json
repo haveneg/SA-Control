@@ -1,1 +1,38 @@
-
+[
+  {
+    "title": "Hall Lights",
+    "default": "http://192.168.1.27:5000/hall/off",
+    "ON": "http://192.168.1.27:5000/hall/on",
+    "OFF": "http://192.168.1.27:5000/hall/off",
+  },
+  {
+    "title": "Disco Lights",
+    "default": "http://192.168.1.27:5000/club/1/off",
+    "ON": "http://192.168.1.27:5000/club/1/on",
+    "OFF": "http://192.168.1.27:5000/club/1/off",
+  },
+  {
+    "title": "Shoebox",
+    "default": "http://192.168.1.27:5000/speaker/off",
+    "ON": http://192.168.1.27:5000/speaker/on"",
+    "OFF": "http://192.168.1.27:5000/speaker/off",
+  },
+  {
+    "title": "Knock-Knock",
+    "default": "http://192.168.1.27:5000/knock/off",
+    "ON": "http://192.168.1.27:5000/knock/on",
+    "OFF": "http://192.168.1.27:5000/knock/off",
+  },
+  {
+    "title": "Red Light",
+    "default": "http://192.168.1.27:5000/club/2/off",
+    "ON": "http://192.168.1.27:5000/club/2/on",
+    "OFF": "http://192.168.1.27:5000/club/2/off",
+  },
+  {
+    "title": "Club Door",
+    "default": "http://192.168.1.27:5000/prison/off",
+    "ON": "http://192.168.1.27:5000/prison/on",
+    "OFF": "http://192.168.1.27:5000/prison/off",
+  },
+]
