@@ -1,7 +1,7 @@
         // Function to handle button clicks
         function handleClick(action, iframeId) {
             const iframe = document.getElementById(iframeId);
-            iframe.contentWindow.postMessage(action, '*');
+            console.log(action);
         }
 
         // Function to handle reset all button click
