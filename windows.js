@@ -1,6 +1,6 @@
 
 const data = require("./links.json");
-console.log(data[0]);
+console.log(data);
 
 // Function to handle button clicks
 function handleClick(action, iframeId) {
