@@ -1,5 +1,5 @@
 
-const data = fetch("./links.json").then().then().catch();
+import data from "./sample.json" assert { type: 'json' };
 console.log(data);
 
 // Function to handle button clicks
