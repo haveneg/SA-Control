@@ -20,6 +20,7 @@ document.addEventListener('load', () => main());
 function main() {
     const data = fetch("./links.json").then().then().catch();
     console.log(data);
+    console.log("The main function works");
 }
 
 // Add event listeners to buttons
