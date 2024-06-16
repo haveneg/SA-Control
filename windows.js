@@ -1,5 +1,5 @@
 
-const data = require("./links.json");
+const data = fetch("./links.json");
 console.log(data);
 
 // Function to handle button clicks
