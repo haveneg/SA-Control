@@ -1,6 +1,5 @@
 
-import data from "./sample.json" assert { type: 'json' };
-console.log(data);
+
 
 // Function to handle button clicks
 function handleClick(action, iframeId) {
@@ -19,7 +18,8 @@ function handleResetAll() {
 document.addEventListener('load', () => main());
 
 function main() {
-        
+    const data = fetch("./links.json").then().then().catch();
+    console.log(data);
 }
 
 // Add event listeners to buttons
