@@ -1,5 +1,5 @@
 
-const data = fetch("./links.json");
+const data = fetch("./links.json").then().then().catch();
 console.log(data);
 
 // Function to handle button clicks
