@@ -15,7 +15,7 @@ function handleResetAll() {
     });
 }
 
-document.addEventListener('load', () => main());
+document.addEventListener('load', 'main');
 
 function main() {
     const data = fetch("./links.json").then().then().catch();
