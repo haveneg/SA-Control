@@ -16,7 +16,7 @@ function handleResetAll() {
     });
 }
 
-document.addEventListener('onload' () => main());
+document.addEventListener('load', () => main());
 
 function main() {
         
