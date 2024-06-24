@@ -32,49 +32,57 @@
     }
 </style>
 </head>
+
 <body>
     <h1>SECRET AGENT BACKUP CONTROL PANEL</h1>
-    <div class="container">
-        <div class="iframe-container">
-            <iframe src="hall-lights.html" width="100%" height="200"></iframe>
-            <div class="button-container">
-                <button id="hallLightsOn">ON</button>
-                <button id="hallLightsOff">OFF</button>
-            </div>
-        </div>
-        <div class="iframe-container">
-            <iframe src="shoebox.html" width="100%" height="200"></iframe>
-            <div class="button-container">
-                <button id="shoeboxOn">ON</button>
-                <button id="shoeboxOff">OFF</button>
-            </div>
-        </div>
-        <div class="iframe-container">
-            <iframe src="knock-knock.html" width="100%" height="200"></iframe>
-            <div class="button-container">
-                <button id="knockKnockOn">ON</button>
-                <button id="knockKnockOff">OFF</button>
-            </div>
-        </div>
-        <div class="iframe-container">
-            <iframe src="red-light.html" width="100%" height="200"></iframe>
-            <div class="button-container">
-                <button id="redLightOn">ON</button>
-                <button id="redLightOff">OFF</button>
-            </div>
-        </div>
-        <div class="iframe-container">
-            <iframe src="disco-lights.html" width="100%" height="200"></iframe>
-            <div class="button-container">
-                <button id="discoLightsOn">ON</button>
-                <button id="discoLightsOff">OFF</button>
-            </div>
-        </div>
+    <div id="gizmo-container" class="container">
+        
     </div>
     <div class="button-container">
         <button id="resetAll">RESET ALL</button>
     </div>
 
+    <script id="json-data" type="application/json">
+        [
+  {
+    "title": "Hall Lights",
+    "default": "http://192.168.1.27:5000/hall/off",
+    "ON": "http://192.168.1.27:5000/hall/on",
+    "OFF": "http://192.168.1.27:5000/hall/off"
+  },
+  {
+    "title": "Disco Lights",
+    "default": "http://192.168.1.27:5000/club/1/off",
+    "ON": "http://192.168.1.27:5000/club/1/on",
+    "OFF": "http://192.168.1.27:5000/club/1/off"
+  },
+  {
+    "title": "Shoebox",
+    "default": "http://192.168.1.27:5000/speaker/off",
+    "ON": "http://192.168.1.27:5000/speaker/on",
+    "OFF": "http://192.168.1.27:5000/speaker/off"
+  },
+  {
+    "title": "Knock-Knock",
+    "default": "http://192.168.1.27:5000/knock/off",
+    "ON": "http://192.168.1.27:5000/knock/on",
+    "OFF": "http://192.168.1.27:5000/knock/off"
+  },
+  {
+    "title": "Red Light",
+    "default": "http://192.168.1.27:5000/club/2/off",
+    "ON": "http://192.168.1.27:5000/club/2/on",
+    "OFF": "http://192.168.1.27:5000/club/2/off"
+  },
+  {
+    "title": "Club Door",
+    "default": "http://192.168.1.27:5000/prison/off",
+    "ON": "http://192.168.1.27:5000/prison/on",
+    "OFF": "http://192.168.1.27:5000/prison/off"
+  }
+]
+
+    </script>
     <script src="windows.js"></script>
 </body>
 </html>
